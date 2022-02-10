@@ -1,5 +1,5 @@
 {
-    "name": "backpack/permissionmanager",
+    "name": "tienhm/permissionmanager",
     "description": "Users and permissions management interface for Laravel 5 using Backpack CRUD.",
     "keywords": [
         "tabacitu",
