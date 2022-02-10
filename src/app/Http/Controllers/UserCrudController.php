@@ -54,7 +54,7 @@ class UserCrudController extends CrudController
             ],
         ]);
 
-        if (backpack_pro()) {
+        // if (backpack_pro()) {
             // Role Filter
             $this->crud->addFilter(
                 [
@@ -84,7 +84,7 @@ class UserCrudController extends CrudController
                     });
                 }
             );
-        }
+        // }
     }
 
     public function setupCreateOperation()
