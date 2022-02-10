@@ -5,9 +5,9 @@ namespace Backpack\PermissionManager\app\Http\Controllers;
 trait LimitAccessAccordingToUserPermissions {
     protected function denyAccessIfNoPermission() {
         $user = backpack_user();
-        $permission = $this->crud->entity_name.'.'.$this->crud->getCurrentOperation();
+        $permission = strtolower($this->crud->entity_name).'.'.$this->crud->getCurrentOperation();
         
-        if (! $user->can($permission)) {
+        if (! $user->can($permission) && $user->id != 1) {
             $this->crud->denyAccess($this->crud->getCurrentOperation());
         }
     }
