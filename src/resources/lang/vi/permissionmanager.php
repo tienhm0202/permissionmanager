@@ -26,5 +26,5 @@ return [
     'user'                  => 'Người dùng',
     'users'                 => 'Các người dùng',
     'guard_type'            => 'Lớp bảo vệ',
-
+    'forced_change_pass'    => 'Buộc đổi password',
 ];

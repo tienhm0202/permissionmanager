@@ -36,6 +36,12 @@ class UserCrudController extends CrudController
                 'label' => trans('pm::permissionmanager.email'),
                 'type'  => 'email',
             ],
+            [
+                'name'  => 'forced_change_pass',
+                'label' => trans('pm::permissionmanager.forced_change_pass'),
+                'type'  => 'checkbox',
+                'default' => 1
+            ],
             [ // n-n relationship (with pivot table)
                 'label'     => trans('pm::permissionmanager.roles'), // Table column heading
                 'type'      => 'select_multiple',
