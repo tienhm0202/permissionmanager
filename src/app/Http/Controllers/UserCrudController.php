@@ -139,6 +139,12 @@ class UserCrudController extends CrudController
                 'type'  => 'password',
             ],
             [
+                'name'  => 'forced_change_pass',
+                'label' => trans('pm::permissionmanager.forced_change_pass'),
+                'type'  => 'checkbox',
+                'default' => 1
+            ],
+            [
                 // two interconnected entities
                 'label'             => trans('pm::permissionmanager.user_role_permission'),
                 'field_unique_name' => 'user_role_permission',
