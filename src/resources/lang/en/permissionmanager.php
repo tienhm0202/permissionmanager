@@ -26,5 +26,5 @@ return [
     'user'                  => 'User',
     'users'                 => 'Users',
     'guard_type'            => 'Guard Type',
-
+    'forced_change_pass'    => 'Force Change Pass',
 ];
