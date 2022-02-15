@@ -27,4 +27,6 @@ return [
     'users'                 => 'Các người dùng',
     'guard_type'            => 'Lớp bảo vệ',
     'forced_change_pass'    => 'Buộc đổi password',
+    'domain'                => 'Domain',
+    'not_allowed'           => 'Không được cho phép',
 ];

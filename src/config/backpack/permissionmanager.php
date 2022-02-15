@@ -46,4 +46,5 @@ return [
     'multiple_guards' => false,
     'default_root_id' => 1,
     'default_root_role' => 'admin',
+    'email_allowed_domain' => ['admin.com', 'example.com']
 ];

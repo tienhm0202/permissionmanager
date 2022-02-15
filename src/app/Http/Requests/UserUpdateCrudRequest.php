@@ -3,6 +3,7 @@
 namespace Backpack\PermissionManager\app\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Backpack\PermissionManager\App\Rules\EmailDomain;
 
 class UserUpdateCrudRequest extends FormRequest
 {
@@ -27,7 +28,11 @@ class UserUpdateCrudRequest extends FormRequest
         $id = $this->get('id') ?? request()->route('id');
 
         return [
-            'email'    => 'required|unique:'.config('permission.table_names.users', 'users').',email,'.$id,
+            'email'    => [
+                'required',
+                'unique:'.config('permission.table_names.users', 'users').',email,'.$id,
+                new EmailDomain()
+            ],
             'name'     => 'required',
             'password' => 'confirmed',
         ];
