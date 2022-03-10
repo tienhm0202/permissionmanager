@@ -140,6 +140,7 @@ class RoleCrudController extends CrudController
             'attribute' => 'name',
             'model'     => $this->permission_model,
             'pivot'     => true,
+            'number_of_columns' => 4,
         ]);
     }
 
