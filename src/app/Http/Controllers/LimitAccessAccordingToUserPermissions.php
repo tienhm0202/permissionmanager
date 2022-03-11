@@ -5,7 +5,7 @@ namespace Backpack\PermissionManager\app\Http\Controllers;
 trait LimitAccessAccordingToUserPermissions {
     protected function denyAccessIfNoPermission() {
         $user = backpack_user();
-        $permission = strtolower($this->crud->entity_name).'.'.$this->crud->getCurrentOperation();
+        $permission = strtolower($this->crud->resource_name).'.'.$this->crud->getCurrentOperation();
 
         $default_root_id = config('backpack.permissionmanager.default_root_id');
         $defautl_root_role = config('backpack.permissionmanager.default_root_role');
